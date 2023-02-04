@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { Form, Field } from 'formik';
 
 export const FormSection = styled(Form)`
-  width: 330px;
+  width: 100%;
   padding: 10px 15px;
   border: 2px solid grey;
   margin: 0 auto;
   margin-bottom: 15px;
-  background-color: #b1cba8;
+  background-color: #5884708f;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
 `;
 

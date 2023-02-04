@@ -18,7 +18,7 @@ export const Number = styled.span`
   margin-left: 10px;
 `;
 export const Button = styled.button`
-  background-color: #d5e1d1;
+  background-color: transparent;
   border: none;
   padding: 0;
 

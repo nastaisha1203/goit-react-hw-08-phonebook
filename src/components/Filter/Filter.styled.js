@@ -11,6 +11,5 @@ export const Label = styled.label`
 `;
 export const Input = styled.input`
   width: 250px;
-  border: none;
   border-radius: 5px;
 `;
