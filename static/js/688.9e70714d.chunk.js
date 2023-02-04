@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[688],{688:function(e,n,t){t.r(n),t.d(n,{default:function(){return l}});var r,c=t(168),a=t(6444).ZP.h1(r||(r=(0,c.Z)(["\n  text-align: center;\n  padding-top: 100px;\n"]))),i=t(184),l=function(){return(0,i.jsx)("div",{children:(0,i.jsx)(a,{children:"Welcome! Please login or register."})})}}}]);
+//# sourceMappingURL=688.9e70714d.chunk.js.map
