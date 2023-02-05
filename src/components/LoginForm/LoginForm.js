@@ -37,7 +37,7 @@ export const LoginForm = () => {
           type="password"
           name="password"
           required
-          minLength={5}
+          minLength={7}
           maxLength={15}
         />
       </Label>

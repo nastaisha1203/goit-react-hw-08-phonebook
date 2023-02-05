@@ -50,7 +50,7 @@ export const RegisterForm = () => {
           type="password"
           name="password"
           required
-          minLength={5}
+          minLength={7}
           maxLength={15}
         />
       </Label>
