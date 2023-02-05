@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import { unwrapResult } from '@reduxjs/toolkit';
+import { toast } from 'react-hot-toast';
 
 import { Button, Form, Label } from './LoginForm.styled';
 
@@ -14,7 +16,12 @@ export const LoginForm = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
+    )
+      .then(unwrapResult)
+      .then(response => {
+        toast.success(`Welcome ${response.user.name}!`);
+      })
+      .catch(() => toast.error(`Oops, something went wrong. Try again.`));
     form.reset();
   };
 
@@ -22,11 +29,17 @@ export const LoginForm = () => {
     <Form onSubmit={handleSubmit} autoComplete="off">
       <Label>
         Email
-        <input type="email" name="email" />
+        <input type="email" name="email" required />
       </Label>
       <Label>
         Password
-        <input type="password" name="password" />
+        <input
+          type="password"
+          name="password"
+          required
+          minLength={5}
+          maxLength={15}
+        />
       </Label>
       <Button type="submit">Log In</Button>
     </Form>
