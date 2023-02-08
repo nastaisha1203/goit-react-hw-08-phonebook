@@ -1,6 +1,5 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
-import { unwrapResult } from '@reduxjs/toolkit';
 import { toast } from 'react-hot-toast';
 
 import { Button, Form, Label } from './LoginForm.styled';
@@ -17,7 +16,7 @@ export const LoginForm = () => {
         password: form.elements.password.value,
       })
     )
-      .then(unwrapResult)
+      .unwrap()
       .then(response => {
         toast.success(`Welcome ${response.user.name}!`);
       })

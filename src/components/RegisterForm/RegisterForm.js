@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import { unwrapResult } from '@reduxjs/toolkit';
 import { toast } from 'react-hot-toast';
 import { register } from 'redux/auth/operations';
 
@@ -18,7 +17,7 @@ export const RegisterForm = () => {
         password: form.elements.password.value,
       })
     )
-      .then(unwrapResult)
+      .unwrap()
       .then(response => {
         toast.success(`Welcome! You have successfully registered!`);
       })
